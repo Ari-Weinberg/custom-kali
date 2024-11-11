@@ -1,3 +1,5 @@
+#!/bin/bash
+
 set -eu
 
 export USERNAME=$1
