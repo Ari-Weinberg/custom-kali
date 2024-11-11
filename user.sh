@@ -4,6 +4,8 @@ echo "in user.sh: $(whoami)"
 env
 echo "------------"
 
+cd $HOME_DIR
+
 # Install OMZSH
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 zsh -c "git clone https://github.com/zsh-users/zsh-autosuggestions.git $HOME_DIR/.oh-my-zsh/custom/plugins/zsh-autosuggestions"
