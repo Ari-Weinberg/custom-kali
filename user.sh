@@ -29,3 +29,9 @@ echo 'export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm"
 echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> $HOME_DIR/.zshrc
 source $HOME_DIR/.zshrc
 nvm install node
+
+python3 -m pipx ensurepath
+
+pipx install git+https://github.com/Tib3rius/AutoRecon.git
+pipx install git+https://github.com/Pennyw0rth/NetExec
+pipx install git+https://github.com/ly4k/Certipy.git
