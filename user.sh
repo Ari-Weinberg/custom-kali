@@ -12,7 +12,7 @@ zsh -c "git clone https://github.com/zsh-users/zsh-autosuggestions.git $HOME_DIR
 zsh -c "git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME_DIR/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"
 sed -i 's/plugins=(git)/plugins=(git zsh-autosuggestions zsh-syntax-highlighting)/g' $HOME_DIR/.zshrc
 sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="bira"/g' $HOME_DIR/.zshrc
-chsh -s $(which zsh) $USERNAME
+# chsh -s $(which zsh) $USERNAME
 
 mkdir $HOME_DIR/.config/terminator/
 curl -s https://raw.githubusercontent.com/Ari-Weinberg/kali-init-setup/main/terminator_config -o $HOME_DIR/.config/terminator/config
