@@ -1,8 +1,11 @@
 #!/bin/bash
 
+$REPO_DIR=$1
 echo "in user.sh: $(whoami)"
 env
 echo "------------"
+
+
 
 cd $HOME
 

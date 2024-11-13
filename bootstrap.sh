@@ -8,7 +8,7 @@ export HOME_DIR="/home/$USERNAME"
 # Allow kali user to use sudo without password:
 echo "$USERNAME ALL=(ALL) NOPASSWD: ALL" | EDITOR='tee -a' visudo
 
-su -c "./root.sh" root
+su -c "./root.sh" 
 
-su -c "./user.sh" $USERNAME
+su -c "./user.sh" $(pwd)
 
