@@ -9,7 +9,7 @@ export REPO_DIR=$(pwd)
 # Allow kali user to use sudo without password:
 echo "$USERNAME ALL=(ALL) NOPASSWD: ALL" | EDITOR='tee -a' visudo
 
-su -c "./root.sh" 
+su -c "./root.sh" root
 
 su -c "./user.sh" $USERNAME $(pwd)
 
