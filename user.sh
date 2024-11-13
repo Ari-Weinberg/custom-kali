@@ -45,4 +45,5 @@ pipx install git+https://github.com/Ari-Weinberg/enumerate-iam.git
 
 # Load XFCE top bar
 xfce4-panel-profiles load $REPO_DIR/configs/xfce4-panel-profiles load
+xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitorVirtual1/workspace0/last-image -s $REPO_DIR/assets/background.jpg
 

@@ -53,3 +53,7 @@ fc-cache -fv
 
 # Add user to docker group
 usermod -aG docker $USERNAME
+
+# Change login screen
+rm /usr/share/desktop-base/kali-theme/login/background
+cp $REPO_DIR/assets/background.jpg /usr/share/desktop-base/kali-theme/login/background
