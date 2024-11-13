@@ -1,6 +1,5 @@
 #!/bin/bash
 
-$REPO_DIR2=$2
 echo "in user.sh: $(whoami)"
 env
 echo "------------"
@@ -43,3 +42,7 @@ pipx install git+https://github.com/Tib3rius/AutoRecon.git
 pipx install git+https://github.com/Pennyw0rth/NetExec
 pipx install git+https://github.com/ly4k/Certipy.git
 pipx install git+https://github.com/Ari-Weinberg/enumerate-iam.git
+
+# Load XFCE top bar
+xfce4-panel-profiles load $REPO_DIR/configs/xfce4-panel-profiles load
+
