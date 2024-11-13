@@ -1,6 +1,6 @@
 #!/bin/bash
 
-$REPO_DIR=$1
+$REPO_DIR2=$1
 echo "in user.sh: $(whoami)"
 env
 echo "------------"
