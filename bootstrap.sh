@@ -11,5 +11,5 @@ echo "$USERNAME ALL=(ALL) NOPASSWD: ALL" | EDITOR='tee -a' visudo
 
 su -c "./root.sh" 
 
-su -c "./user.sh" $(pwd)
+su -c "./user.sh" $USERNAME $(pwd)
 
