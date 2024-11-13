@@ -15,6 +15,12 @@ LATEST_DEBIAN_RELEASE=$(curl -s https://www.debian.org/releases/stable/ | grep -
 printf '%s\n' "deb https://download.docker.com/linux/debian $LATEST_DEBIAN_RELEASE stable" | tee /etc/apt/sources.list.d/docker-ce.list
 curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /etc/apt/trusted.gpg.d/docker-ce-archive-keyring.gpg
 
+# Install ngrok
+curl -sSL https://ngrok-agent.s3.amazonaws.com/ngrok.asc \
+  | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null \
+  && echo "deb https://ngrok-agent.s3.amazonaws.com buster main" \
+  | sudo tee /etc/apt/sources.list.d/ngrok.list
+
 # Packages
 apt update
 apt-get install -qq -y libxft-dev libxinerama-dev libfreetype6-dev libfontconfig1-dev picom feh acpi rofi \
@@ -24,15 +30,7 @@ apt-get install -qq -y libxft-dev libxinerama-dev libfreetype6-dev libfontconfig
     redis-tools smbclient smbmap snmp sslscan sipvicious tnscmd10g whatweb wkhtmltopdf \
     build-essential libssl-dev zlib1g-dev \
     libbz2-dev libreadline-dev libsqlite3-dev curl \
-    libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev zsh burpsuite
-
-# Install ngrok
-curl -sSL https://ngrok-agent.s3.amazonaws.com/ngrok.asc \
-  | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null \
-  && echo "deb https://ngrok-agent.s3.amazonaws.com buster main" \
-  | sudo tee /etc/apt/sources.list.d/ngrok.list \
-  && sudo apt update \
-  && sudo apt install ngrok
+    libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev zsh burpsuite ngrok
 
 cd /tmp
 
