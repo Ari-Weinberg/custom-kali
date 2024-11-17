@@ -48,7 +48,7 @@ pipx install git+https://github.com/Ari-Weinberg/enumerate-iam.git
 # sed -i 's|<property name="last-image" type="string" value="/usr/share/backgrounds/kali-16x9/default"/>|<property name="last-image" type="string" value="'"$HOME"'/background.jpg"/>|g' "$HOME/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml"
 
 startx
-xfce4-panel-profiles load $REPO_DIR/configs/xfce4-panel-profiles load
+# xfce4-panel-profiles load $REPO_DIR/configs/xfce4-panel-profiles load
 xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitorVirtual1/workspace0/last-image -s $REPO_DIR/assets/background.jpg
 
 
