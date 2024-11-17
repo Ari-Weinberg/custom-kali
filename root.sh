@@ -56,4 +56,6 @@ usermod -aG docker $USERNAME
 
 # Change login screen
 rm /usr/share/desktop-base/kali-theme/login/background
+cp $REPO_DIR/assets/background.jpg /usr/share/backgrounds/custom-background.png
+chmod 666 /usr/share/backgrounds/custom-background.png
 cp $REPO_DIR/assets/background.jpg /usr/share/desktop-base/kali-theme/login/background
