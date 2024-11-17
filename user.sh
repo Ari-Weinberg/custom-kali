@@ -44,15 +44,31 @@ pipx install git+https://github.com/ly4k/Certipy.git
 pipx install git+https://github.com/Ari-Weinberg/enumerate-iam.git
 pipx install git+https://github.com/aniqfakhrul/powerview.py.git
 
-mkdir -p $HOME/.config/xfce4/xfconf/xfce-perchannel-xml/
-cp $REPO_DIR/configs/xfce4-desktop.xml $HOME/.config/xfce4/xfconf/xfce-perchannel-xml/
-cp $REPO_DIR/configs/xfce4-panel.xml $HOME/.config/xfce4/xfconf/xfce-perchannel-xml/
+# mkdir -p $HOME/.config/xfce4/xfconf/xfce-perchannel-xml/
+# cp $REPO_DIR/configs/xfce4-desktop.xml $HOME/.config/xfce4/xfconf/xfce-perchannel-xml/
+# cp $REPO_DIR/configs/xfce4-panel.xml $HOME/.config/xfce4/xfconf/xfce-perchannel-xml/
 # cp $REPO_DIR/assets/background.jpg $HOME/Pictures/
 # sed -i 's|<property name="last-image" type="string" value="/usr/share/backgrounds/kali-16x9/default"/>|<property name="last-image" type="string" value="'"$HOME"'/background.jpg"/>|g' "$HOME/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml"
 
 # startx
 # xfce4-panel-profiles load $REPO_DIR/configs/xfce-panel.conf load
 # xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitorVirtual1/workspace0/last-image -s $REPO_DIR/assets/background.jpg
+
+cp $REPO_DIR/initial-boot.sh $HOME
+cp $REPO_DIR/configs $HOME
+chmod +x "$HOME/initial-boot.sh"
+
+# Add execution logic to .zshrc if not already present
+MARKER="# RUN-ONCE SCRIPT ENTRY"
+if ! grep -q "$MARKER" "$HOME/.zshrc" 2>/dev/null; then
+    cat << EOF >> "$HOME/.zshrc"
+
+# $MARKER
+if [ -x "$HOME/initial-boot.sh" ]; then
+    "$HOME/initial-boot.sh"
+    sed -i "/$MARKER/,+4d" "\$HOME/.zshrc"
+fi
+EOF
 
 
 
