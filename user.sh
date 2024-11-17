@@ -45,6 +45,7 @@ pipx install git+https://github.com/Ari-Weinberg/enumerate-iam.git
 
 mkdir -p $HOME/.config/xfce4/xfconf/xfce-perchannel-xml/
 cp $REPO_DIR/configs/xfce4-desktop.xml $HOME/.config/xfce4/xfconf/xfce-perchannel-xml/
+cp $REPO_DIR/configs/xfce4-panel.xml $HOME/.config/xfce4/xfconf/xfce-perchannel-xml/
 # cp $REPO_DIR/assets/background.jpg $HOME/Pictures/
 # sed -i 's|<property name="last-image" type="string" value="/usr/share/backgrounds/kali-16x9/default"/>|<property name="last-image" type="string" value="'"$HOME"'/background.jpg"/>|g' "$HOME/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml"
 
