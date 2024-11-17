@@ -42,6 +42,7 @@ pipx install git+https://github.com/Tib3rius/AutoRecon.git
 pipx install git+https://github.com/Pennyw0rth/NetExec
 pipx install git+https://github.com/ly4k/Certipy.git
 pipx install git+https://github.com/Ari-Weinberg/enumerate-iam.git
+pipx install git+https://github.com/aniqfakhrul/powerview.py.git
 
 mkdir -p $HOME/.config/xfce4/xfconf/xfce-perchannel-xml/
 cp $REPO_DIR/configs/xfce4-desktop.xml $HOME/.config/xfce4/xfconf/xfce-perchannel-xml/
