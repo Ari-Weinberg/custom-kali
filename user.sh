@@ -55,8 +55,9 @@ pipx install git+https://github.com/aniqfakhrul/powerview.py.git
 # xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitorVirtual1/workspace0/last-image -s $REPO_DIR/assets/background.jpg
 
 cp $REPO_DIR/initial-boot.sh $HOME
-cp $REPO_DIR/configs $HOME
-cp $REPO_DIR/assets/background.jpg $HOME/Pictures/
+cp -r $REPO_DIR/configs $HOME
+mkdir -p $HOME/Pictures/
+cp $REPO_DIR/assets/background.jpg $HOME/Pictures/background.jpg
 chmod +x "$HOME/initial-boot.sh"
 
 # Add execution logic to .zshrc if not already present
