@@ -64,7 +64,6 @@ chmod +x "$HOME/initial-boot.sh"
 MARKER="# RUN-ONCE SCRIPT ENTRY"
 if ! grep -q "$MARKER" "$HOME/.zshrc" 2>/dev/null; then
     cat >> "$HOME/.zshrc" << EOF
-
 # $MARKER
 if [ -x "$HOME/initial-boot.sh" ]; then
     "$HOME/initial-boot.sh"
