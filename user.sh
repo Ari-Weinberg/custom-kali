@@ -36,6 +36,7 @@ nvm install node
 echo "export PATH=$PATH:/usr/local/go/bin" >> $HOME/.zshrc
 
 # Install pipx and pipx packages
+python3 -m pip install --user pipx
 python3 -m pipx ensurepath
 
 pipx install git+https://github.com/Tib3rius/AutoRecon.git
