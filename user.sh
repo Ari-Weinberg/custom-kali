@@ -63,7 +63,7 @@ chmod +x "$HOME/initial-boot.sh"
 # Add execution logic to .zshrc if not already present
 MARKER="# RUN-ONCE SCRIPT ENTRY"
 if ! grep -q "$MARKER" "$HOME/.zshrc" 2>/dev/null; then
-    cat << EOF >> "$HOME/.zshrc"
+    cat >> "$HOME/.zshrc" << EOF
 
 # $MARKER
 if [ -x "$HOME/initial-boot.sh" ]; then
