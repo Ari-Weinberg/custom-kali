@@ -30,7 +30,8 @@ apt-get install -qq -y libxft-dev libxinerama-dev libfreetype6-dev libfontconfig
     redis-tools smbclient smbmap snmp sslscan sipvicious tnscmd10g whatweb wkhtmltopdf \
     build-essential libssl-dev zlib1g-dev \
     libbz2-dev libreadline-dev libsqlite3-dev curl \
-    libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev zsh burpsuite ngrok
+    libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev \
+    liblzma-dev zsh burpsuite ngrok pipx
 
 cd /tmp
 
