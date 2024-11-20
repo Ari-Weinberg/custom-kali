@@ -66,7 +66,7 @@ MARKER="# RUN-ONCE SCRIPT ENTRY"
 echo $MARKER >> $HOME/.zshrc
 echo "if [ -x \"$HOME/initial-boot.sh\" ]; then" >> $HOME/.zshrc
 echo "    \"$HOME/initial-boot.sh\"" >> $HOME/.zshrc
-echo "    sed -i \"/$MARKER/,+4d\" \"\$HOME/.zshrc\"" >> $HOME/.zshrc
+echo "    sed -i \"/$MARKER/,+5d\" \"\$HOME/.zshrc\"" >> $HOME/.zshrc
 echo "fi" >> $HOME/.zshrc
 
 
