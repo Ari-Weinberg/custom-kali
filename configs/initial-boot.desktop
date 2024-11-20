@@ -1,0 +1,4 @@
+[Desktop Entry]
+Name=initial-boot
+Exec=~/initial-boot.sh
+Type=Application

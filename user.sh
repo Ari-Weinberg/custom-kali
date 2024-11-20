@@ -54,7 +54,8 @@ pipx install git+https://github.com/aniqfakhrul/powerview.py.git
 # startx
 # xfce4-panel-profiles load $REPO_DIR/configs/xfce-panel.conf load
 # xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitorVirtual1/workspace0/last-image -s $REPO_DIR/assets/background.jpg
-
+mkdir -p $HOME/.config/autostart/
+cp $REPO_DIR/configs/initial-boot.desktop $HOME/.config/autostart/
 cp $REPO_DIR/initial-boot.sh $HOME
 cp -r $REPO_DIR/configs $HOME
 mkdir -p $HOME/Pictures/
@@ -62,12 +63,12 @@ cp $REPO_DIR/assets/background.jpg $HOME/Pictures/background.jpg
 chmod +x "$HOME/initial-boot.sh"
 
 # Add execution logic to .zshrc if not already present
-MARKER="# RUN-ONCE SCRIPT ENTRY"
-echo $MARKER >> $HOME/.zprofile
-echo "if [ -x \"$HOME/initial-boot.sh\" ]; then" >> $HOME/.zprofile
-echo "    \"$HOME/initial-boot.sh\"" >> $HOME/.zprofile
-echo "    sed -i \"/$MARKER/,+5d\" \"\$HOME/.zprofile\"" >> $HOME/.zprofile
-echo "fi" >> $HOME/.zprofile
+# MARKER="# RUN-ONCE SCRIPT ENTRY"
+# echo $MARKER >> $HOME/.zprofile
+# echo "if [ -x \"$HOME/initial-boot.sh\" ]; then" >> $HOME/.zprofile
+# echo "    \"$HOME/initial-boot.sh\"" >> $HOME/.zprofile
+# echo "    sed -i \"/$MARKER/,+5d\" \"\$HOME/.zprofile\"" >> $HOME/.zprofile
+# echo "fi" >> $HOME/.zprofile
 
 
 
