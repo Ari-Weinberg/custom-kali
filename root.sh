@@ -27,7 +27,7 @@ apt-get install -qq -y libxft-dev libxinerama-dev libfreetype6-dev libfontconfig
     libimlib2-dev dex apt-transport-https code docker-ce docker-ce-cli containerd.io \
     terminator seclists curl dnsrecon enum4linux feroxbuster \
     gobuster impacket-scripts nbtscan nikto nmap onesixtyone oscanner \
-    redis-tools smbclient smbmap snmp sslscan sipvicious tnscmd10g whatweb wkhtmltopdf \
+    redis-tools smbclient smbmap snmp sslscan sipvicious tnscmd10g whatweb \
     build-essential libssl-dev zlib1g-dev \
     libbz2-dev libreadline-dev libsqlite3-dev curl \
     libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev \
